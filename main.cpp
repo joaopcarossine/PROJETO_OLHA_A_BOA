@@ -1,9 +1,9 @@
 #include <iostream>
 #include <string>
-#include <cstdlib>
-#include <ctime>
-#include <set>
-#include <vector>
+#include <cstdlib> // Necessário para gerar números aleatórios
+#include <ctime> // Necessário para gerar números aleatórios
+#include <set> // Necessário para não ter números duplicados na cartela
+#include <vector> // Necessário para armazenar as cartelas geradas e números chamados
 #include <fstream> // Necessário para operações com arquivos
 
 using namespace std;
@@ -15,8 +15,8 @@ struct CartelaBingo {
 };
 
 // Declaração dos protótipos
-void gerarCartela(CartelaBingo* bingo);
-void imprimirCartela(const CartelaBingo* bingo);
+void gerarCartela(CartelaBingo* bingo); 
+void imprimirCartela(const CartelaBingo* bingo); 
 void exibirCartelas(const vector<CartelaBingo*>& cartelas);
 void inserirNumero(vector<int>& numerosChamados, vector<CartelaBingo*>& cartelas);
 void exibirJogo(const vector<int>& numerosChamados, const vector<CartelaBingo*>& cartelas);
@@ -38,7 +38,7 @@ int main() {
         cout << "2- Exibir Cartelas" << endl;
         cout << "3- Inserir Numero" << endl;
         cout << "4- Exibir Numeros Chamados e Cartela Marcada" << endl;
-        cout << "5- Exportar Cartelas para TXT" << endl; // Nova opção
+        cout << "5- Exportar Cartelas para TXT" << endl;
         cout << "0- Sair" << endl;
         cout << "Escolha uma opcao: ";
         cin >> opcao;
